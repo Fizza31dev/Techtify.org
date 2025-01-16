@@ -151,43 +151,5 @@
 
    
 
-    <!-- Live Chat Button -->
-    <div class="live-chat">
-        <a href="#" class="chat-button">
-            <i class="fas fa-comments"></i> Live Chat
-        </a>
-    </div>
-</body>
-</html>
-<script>
-    document.getElementById("contact-form").addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent default form submission
-        const formData = new FormData(this);
-        fetch(this.action, {
-            method: "POST",
-            body: formData,
-            headers: { 'Accept': 'application/json' }
-        }).then(response => {
-            if (response.ok) {
-                alert("Thank you for your message! We'll be in touch soon.");
-                this.reset();
-            } else {
-                alert("Oops! There was a problem submitting your form.");
-            }
-        });
-    });
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-          const faqItems = document.querySelectorAll('.faq-item h3');
-      
-          faqItems.forEach(function (item) {
-            item.addEventListener('click', function () {
-              const faqContent = this.nextElementSibling;
-              faqContent.style.display = faqContent.style.display === 'block' ? 'none' : 'block';
-              this.parentElement.classList.toggle('active');
-            });
-          });
-        });
-      </script>
+   
       
